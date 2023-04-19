@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Estilos para la barra de scroll */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de scroll */
+  height: 5px;
+}
+
+/* Estilos para el pulgar de la barra de scroll */
+::-webkit-scrollbar-thumb {
+  background-color: #4d4b71; /* Color de fondo del pulgar */
+  border-radius: 4px; /* Radio de borde del pulgar */
+}
+
+/* Estilos para el pulgar de la barra de scroll cuando se mueve */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #824f7d; /* Color de fondo del pulgar al pasar el ratón por encima */
+}

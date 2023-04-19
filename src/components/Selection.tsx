@@ -1,35 +1,16 @@
 import { useState } from "react";
 
-interface Element {
+interface Lang {
   value: string;
   text: string;
 }
 
-/*
-English
-Spanish
-French
-German
-Italian
-Portuguese
-Dutch
-Russian
-Japanese
-Simplified Chinese
+interface Element {
+  getLang: (value: string) => void;
+}
 
-Korean
-Arab
-Hindi
-Bengali
-Punjabi
-Marathi
-telugu
-Tamil
-Urdu.
-*/
-
-export function SelectList() {
-  const [elements, setElements] = useState<Element[]>([
+export function SelectList({ getLang }: Element) {
+  const elements = [
     { value: "English", text: "English" },
     { value: "Spanish", text: "Spanish" },
     { value: "French", text: "French" },
@@ -50,17 +31,23 @@ export function SelectList() {
     { value: "Telugu", text: "Telugu" },
     { value: "Tamil", text: "Tamil" },
     { value: "Urdu", text: "Urdu" },
-  ]);
+    { value: "Binary", text: "Binary" },
+    { value: "Vietnamese", text: "Vietnamese" },
+  ];
 
   const [selectedElement, setSelectedElement] = useState<string>("");
 
   function handleSelection(event: React.ChangeEvent<HTMLSelectElement>) {
     setSelectedElement(event.target.value);
-    console.log(event.target.value);
+    getLang(event.target.value);
   }
 
   return (
-    <select value={selectedElement} onChange={handleSelection}>
+    <select
+      value={selectedElement}
+      onChange={handleSelection}
+      className="rounded-lg bg-c-black focus:outline-none border-2 border-c-light focus:border-c-violet text-c-light"
+    >
       {elements.map((element) => (
         <option key={element.value} value={element.value}>
           {element.text}
