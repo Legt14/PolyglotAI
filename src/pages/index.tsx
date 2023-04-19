@@ -6,7 +6,8 @@ import { Display } from "@/components/DisplayComponent";
 import { SocialComponent } from "../components/Social";
 
 export default function Home() {
-  let img = 'https://img.shields.io/github/stars/Legt14/translate-app.github?color=%237d5eb5&logo=github&style=for-the-badge'
+  let img =
+    "https://img.shields.io/github/stars/Legt14/translate-app.github?color=%237d5eb5&logo=github&style=for-the-badge";
   const [translated, setTranlated] = useState<string>("");
   const [inputValue, setInputValue] = useState<string>("");
   const [lang, setLang] = useState<string>("");
@@ -31,14 +32,18 @@ export default function Home() {
           <span className="text-7xl font-signika">AI</span>
         </div>
         <section className="w-full flex flex-col gap-8">
-          <section className="w-full flex fle justify-between ">
+          <section className="w-full flex justify-between ">
             <SelectList getLang={getLang} />
             <Button input={inputValue} lang={lang} data={data} />
           </section>
           <InputComponent getInput={getInput} />
-        </section>
-        <section>
-          <SocialComponent name={"Git"} img={img} link={"https://github.com/Legt14/translate-app.github"} />
+            <section>
+              <SocialComponent
+                name={"Git"}
+                img={img}
+                link={"https://github.com/Legt14/translate-app.github"}
+              />
+            </section>
         </section>
       </section>
       <Display data={translated} />

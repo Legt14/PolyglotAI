@@ -12,7 +12,7 @@ export function SocialComponent({ name, img, link }: Social) {
       href={link}
       target="_blank"
     >
-      <img src={img} alt={name} className="w-20"/>
+      <img src={img} alt={name} className="w-28"/>
     </a>
   );
 }
