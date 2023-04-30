@@ -1,4 +1,4 @@
-# 🌎[PolyglotAI](https://polyglot-ai-github-p936btsuw-legt14.vercel.app/) - AI-powered Translator using OpenAI API and Next.js
+# 🌎[PolyglotAI](https://polyglot-ai.vercel.app/) - AI-powered Translator using OpenAI API and Next.js
 PolyglotAI is a project that utilizes the powerful OpenAI API and Next.js to create an AI-powered language translator. The OpenAI API is based on the GPT language model, which is capable of generating coherent and relevant text, and Next.js is a React framework that allows for efficient building of high-quality web applications.
 
 
