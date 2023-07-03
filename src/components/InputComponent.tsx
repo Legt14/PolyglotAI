@@ -10,7 +10,7 @@ export function InputComponent({ getInput }: Input) {
   return (
     <textarea
       name="input"
-      className="w-full h-44 lg:h-80 break-words 
+      className="w-full h-28 lg:h-80 break-words 
       resize-none focus:outline-none rounded-lg border-2 focus:border-c-violet p-3 bg-transparent text-c-light"
       onChange={handleInputChange}
       placeholder="Hola"

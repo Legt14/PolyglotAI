@@ -25,8 +25,8 @@ export default function Home() {
   }
 
   return (
-    <main className="w-full h-screen flex flex-col lg:flex-row lg:items-start font-signika items-center justify-between gap-5 bg-c-black text-c-violet">
-      <section className="w-full p-5 flex flex-col items-center gap-14">
+    <main className="w-screen min-h-screen font-signika flex flex-col lg:flex-row justify-between gap-2 bg-c-black text-c-violet">
+      <section className="w-full h-full p-5 flex flex-col items-center gap-14">
         <div className="flex">
           <h1 className="text-7xl text-c-light text-right">Polyglot</h1>
           <span className="text-7xl font-signika">AI</span>
@@ -37,13 +37,13 @@ export default function Home() {
             <Button input={inputValue} lang={lang} data={data} />
           </section>
           <InputComponent getInput={getInput} />
-            <section>
-              <SocialComponent
-                name={"Git"}
-                img={img}
-                link={"https://github.com/Legt14/translate-app.github"}
-              />
-            </section>
+          <section>
+            <SocialComponent
+              name={"Git"}
+              img={img}
+              link={"https://github.com/Legt14/translate-app.github"}
+            />
+          </section>
         </section>
       </section>
       <Display data={translated} />
